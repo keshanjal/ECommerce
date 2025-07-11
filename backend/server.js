@@ -9,6 +9,9 @@ import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 
+
+mongoose.set('strictQuery', true);
+
 dotenv.config();
 
 const app = express();
