@@ -7,8 +7,10 @@ import {
   CART_ADD_ITEM_FAIL,
 } from '../constants/cartConstants';
 
+import api from '../api/axios';
+
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
-  const { data } = await Axios.get(`/api/products/${productId}`);
+  const { data } = await api.get(`/api/products/${productId}`);
   const {
     cart: { cartItems },
   } = getState();
